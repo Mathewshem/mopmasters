@@ -28,6 +28,17 @@ export default function AreasServed() {
               </div>
             </div>
           ))}
+
+          <a
+            href="/contact"
+            className="card flex flex-col items-center justify-center text-center transition hover:border-brand-500 hover:shadow-soft"
+          >
+            <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-leaf-500 text-white">
+              <IconMapPin className="h-6 w-6" />
+            </div>
+            <h3 className="mt-4 font-display text-lg font-bold text-ink">And Many Other Cities</h3>
+            <p className="mt-2 text-sm font-semibold text-brand-600">Contact Us Today</p>
+          </a>
         </div>
       </div>
     </section>
