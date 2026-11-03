@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import QuoteEstimator from "./QuoteEstimator";
-import { IconArrowRight, IconMapPin, IconPhone, IconMail, IconClock } from "../Icons";
+import { IconArrowRight, IconMapPin, IconPhone, IconMail } from "../Icons";
 import { company } from "@/lib/siteData";
 
 const initialForm = { name: "", email: "", phone: "", service: "Home Cleaning", message: "" };
@@ -75,12 +75,6 @@ export default function ContactSection() {
                 <IconMail className="h-4 w-4" />
               </span>
               <a href={`mailto:${company.email}`} className="hover:text-brand-600">{company.email}</a>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-500 text-white">
-                <IconClock className="h-4 w-4" />
-              </span>
-              {company.hours}
             </li>
           </ul>
         </div>

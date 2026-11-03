@@ -15,6 +15,8 @@ import {
   IconBug,
   IconTrash,
   IconTree,
+  IconSpray,
+  IconShield,
 } from "../Icons";
 
 const ICONS = {
@@ -27,6 +29,8 @@ const ICONS = {
   fumigation: IconBug,
   "janitorial-bin-provision": IconTrash,
   landscaping: IconTree,
+  "seats-upholstery-cleaning": IconSpray,
+  "mattress-cleaning": IconShield,
 };
 
 export default function ServicesAccordion({ full = false }) {
