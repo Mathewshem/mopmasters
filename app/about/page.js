@@ -6,8 +6,8 @@ import { images, company } from "@/lib/siteData";
 import { IconArrowRight, IconLeaf, IconShield, IconClock, IconStar } from "@/components/Icons";
 
 export const metadata = {
-  title: "About Us | MopMasters Cleaning Services",
-  description: "Learn about MopMasters Cleaning Services, a dedicated team of cleaning professionals serving Nairobi, Kenya.",
+  title: "About Us | Antlar Elite Services",
+  description: "Learn about Antlar Elite Services, a dedicated team of cleaning professionals serving Nairobi, Kenya.",
 };
 
 const values = [
@@ -22,12 +22,12 @@ export default function AboutPage() {
     <>
       <section className="bg-brand-50 py-16 sm:py-20">
         <div className="container-wide text-center">
-          <span className="eyebrow mx-auto">About MopMasters</span>
+          <span className="eyebrow mx-auto">About Antlar</span>
           <h1 className="section-heading mt-4">
             Kenya&apos;s Trusted Partner for Spotless Homes & Offices
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-ink/70">
-            MopMasters Cleaning Services was founded to bring reliable, thorough and affordable
+            Antlar Elite Services was founded to bring reliable, thorough and affordable
             cleaning to families and businesses across Kenya — one spotless space at a time.
           </p>
           <p className="mx-auto mt-3 max-w-2xl font-semibold text-brand-700">{company.intro}</p>
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section className="container-wide grid gap-10 py-16 sm:py-24 lg:grid-cols-2 lg:items-center">
         <Image
           src={images.aboutAndCta}
-          alt="MopMasters cleaning team"
+          alt="Antlar cleaning team"
           width={900}
           height={700}
           className="w-full rounded-xl2 object-cover"
@@ -53,7 +53,7 @@ export default function AboutPage() {
             What started as a small residential cleaning crew has grown into a full-service
             cleaning company trusted by hundreds of Nairobi households and businesses. We
             believe a clean space is the foundation of a healthy, productive life — so we built
-            MopMasters around consistency, trust and genuine care for every home and office we
+            Antlar around consistency, trust and genuine care for every home and office we
             enter.
           </p>
           <p className="mt-4 text-ink/70">
@@ -71,7 +71,7 @@ export default function AboutPage() {
         <div className="container-wide">
           <div className="mx-auto max-w-2xl text-center">
             <span className="eyebrow mx-auto">Why Choose Us</span>
-            <h2 className="section-heading mt-4">What Makes MopMasters Different</h2>
+            <h2 className="section-heading mt-4">What Makes Antlar Different</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (

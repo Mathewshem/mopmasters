@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="relative hidden overflow-hidden rounded-xl2 lg:block">
               <Image
                 src={images.aboutAndCta}
-                alt="MopMasters cleaner at work"
+                alt="Antlar Elite Services cleaner at work"
                 width={700}
                 height={560}
                 className="h-56 w-full object-cover"
@@ -46,12 +46,17 @@ export default function Footer() {
       <div className="container-wide mt-16 grid gap-10 pb-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="MopMasters logo" width={44} height={44} />
-            <span className="font-display text-2xl font-bold tracking-tight text-ink">MopMasters</span>
+            <Image src="/logo.png" alt="Antlar Elite Services logo" width={44} height={44} />
+            <span className="font-display text-xl font-bold tracking-tight text-brand-600">
+              Antlar <span className="text-leaf-500">Elite Services</span>
+            </span>
           </div>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-leaf-500">
+            {company.tagline}
+          </p>
           <p className="mt-4 text-sm text-ink/70">
-            At MopMasters we provide professional cleaning services for homes and offices across
-            Nairobi. Our team is dedicated to making every space spotless, healthy and welcoming.
+            At Antlar Elite Services we provide professional cleaning services for homes and offices
+            across Nairobi. Our team is dedicated to making every space spotless, healthy and welcoming.
           </p>
           <div className="mt-5 flex gap-3">
             {[
@@ -117,7 +122,7 @@ export default function Footer() {
 
       <div className="border-t border-black/5">
         <div className="container-wide flex flex-col items-center justify-between gap-2 py-6 text-xs text-ink/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} MopMasters Cleaning Services. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Antlar Elite Services. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span>Nairobi, Kenya</span>
             <Link href="/admin" className="hover:text-brand-600">Admin</Link>

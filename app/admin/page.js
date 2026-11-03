@@ -37,7 +37,7 @@ export default function AdminLoginPage() {
     <section className="flex min-h-[70vh] items-center justify-center bg-brand-50 px-4 py-16">
       <div className="card w-full max-w-sm text-center">
         <div className="mx-auto flex items-center justify-center gap-2">
-          <Image src="/logo.png" alt="MopMasters logo" width={40} height={40} />
+          <Image src="/logo.png" alt="Antlar logo" width={40} height={40} />
         </div>
         <div className="mx-auto mt-4 grid h-12 w-12 place-items-center rounded-full bg-brand-500 text-white">
           <IconShield className="h-6 w-6" />

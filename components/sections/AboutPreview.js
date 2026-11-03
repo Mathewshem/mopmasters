@@ -9,7 +9,7 @@ export default function AboutPreview() {
       <div className="relative overflow-hidden rounded-xl2">
         <Image
           src={images.homeAbout}
-          alt="MopMasters cleaning team at work"
+          alt="Antlar cleaning team at work"
           width={1400}
           height={840}
           className="h-[420px] w-full object-cover"

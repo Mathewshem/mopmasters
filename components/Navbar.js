@@ -15,9 +15,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-black/5 bg-sand/90 backdrop-blur">
       <div className="container-wide flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <Image src="/logo.png" alt="MopMasters Cleaning Services logo" width={48} height={48} priority />
-          <span className="font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">
-            Mop<span className="text-brand-500">Masters</span>
+          <Image src="/logo.png" alt="Antlar Elite Services logo" width={48} height={48} priority />
+          <span className="flex flex-col leading-tight">
+            <span className="font-display text-xl font-bold tracking-tight text-brand-600 sm:text-2xl">
+              Antlar <span className="text-leaf-500">Elite Services</span>
+            </span>
           </span>
         </Link>
 

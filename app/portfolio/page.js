@@ -4,8 +4,8 @@ import { portfolioItems, images } from "@/lib/siteData";
 import { IconArrowRight, IconArrowUpRight } from "@/components/Icons";
 
 export const metadata = {
-  title: "Portfolio | MopMasters Cleaning Services",
-  description: "A look at recent residential and commercial cleaning projects completed by MopMasters across Kenya.",
+  title: "Portfolio | Antlar Elite Services",
+  description: "A look at recent residential and commercial cleaning projects completed by Antlar across Kenya.",
 };
 
 export default function PortfolioPage() {
@@ -50,7 +50,7 @@ export default function PortfolioPage() {
         </div>
 
         <div className="mt-14 text-center">
-          <p className="text-ink/70">Have a space that needs the MopMasters touch?</p>
+          <p className="text-ink/70">Have a space that needs the Antlar touch?</p>
           <Link href="/contact" className="btn-primary mt-4">
             Start Your Project <IconArrowRight className="h-4 w-4" />
           </Link>

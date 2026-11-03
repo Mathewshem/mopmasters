@@ -2,7 +2,7 @@ import AdminShell from "@/components/admin/AdminShell";
 import InvoicesDashboard from "@/components/admin/InvoicesDashboard";
 
 export const metadata = {
-  title: "Invoices | MopMasters Admin",
+  title: "Invoices | Antlar Admin",
   robots: { index: false, follow: false },
 };
 

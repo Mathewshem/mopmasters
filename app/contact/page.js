@@ -2,8 +2,8 @@ import ContactSection from "@/components/sections/ContactSection";
 import AreasServed from "@/components/sections/AreasServed";
 
 export const metadata = {
-  title: "Contact Us | MopMasters Cleaning Services",
-  description: "Get a quick cleaning estimate or book a service with MopMasters Cleaning Services in Nairobi, Kenya.",
+  title: "Contact Us | Antlar Elite Services",
+  description: "Get a quick cleaning estimate or book a service with Antlar Elite Services in Nairobi, Kenya.",
 };
 
 export default function ContactPage() {

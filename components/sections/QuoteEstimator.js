@@ -94,7 +94,7 @@ export default function QuoteEstimator({ onUseQuote }) {
       <div className="hidden overflow-hidden rounded-xl2 lg:block">
         <Image
           src={images.contactHero}
-          alt="MopMasters cleaner ready to help"
+          alt="Antlar cleaner ready to help"
           width={700}
           height={800}
           className="h-full w-full object-cover"

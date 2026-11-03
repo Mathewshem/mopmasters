@@ -70,7 +70,7 @@ export default function ServicesAccordion({ full = false }) {
                 <div className="mt-5 overflow-hidden rounded-xl2 max-w-2xl">
                   <Image
                     src={images.homeService}
-                    alt={`${service.title} by MopMasters`}
+                    alt={`${service.title} by Antlar`}
                     width={900}
                     height={420}
                     className="h-56 w-full object-cover"

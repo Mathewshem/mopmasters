@@ -24,8 +24,8 @@ export default function AdminShell({ children }) {
       <header className="border-b border-black/5 bg-white">
         <div className="container-wide flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="MopMasters logo" width={36} height={36} />
-            <span className="font-display text-lg font-bold text-ink">MopMasters Admin</span>
+            <Image src="/logo.png" alt="Antlar Elite Services logo" width={36} height={36} />
+            <span className="font-display text-lg font-bold text-ink">Antlar Admin</span>
           </div>
           <button onClick={handleLogout} type="button" className="btn-secondary !px-4 !py-2 text-xs">
             Log Out

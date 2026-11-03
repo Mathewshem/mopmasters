@@ -19,18 +19,18 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "MopMasters Cleaning Services | Professional Cleaning in Nairobi, Kenya",
+  title: "Antlar Elite Services | Professional Cleaning in Nairobi, Kenya",
   description:
-    "MopMasters Cleaning Services delivers trusted residential, office, deep and move-in/move-out cleaning across Nairobi, Kenya. Book a spotless clean today.",
+    "Antlar Elite Services delivers trusted residential, office, deep and move-in/move-out cleaning across Nairobi, Kenya. Book a spotless clean today.",
   keywords: [
     "cleaning services Nairobi",
     "office cleaning Kenya",
     "house cleaning Nairobi",
-    "MopMasters",
+    "Antlar Elite Services",
     "deep cleaning Kenya",
   ],
   openGraph: {
-    title: "MopMasters Cleaning Services",
+    title: "Antlar Elite Services",
     description:
       "Trusted residential and commercial cleaning services in Nairobi, Kenya.",
     locale: "en_KE",

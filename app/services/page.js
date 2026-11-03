@@ -2,7 +2,7 @@ import ServicesAccordion from "@/components/sections/ServicesAccordion";
 import Pricing from "@/components/sections/Pricing";
 
 export const metadata = {
-  title: "Our Services | MopMasters Cleaning Services",
+  title: "Our Services | Antlar Elite Services",
   description: "Residential, commercial, deep, move-in/move-out, window and post-construction cleaning services across Nairobi, Kenya.",
 };
 

@@ -1,6 +1,6 @@
-# MopMasters Cleaning Services — Website
+# Antlar Elite Services — Website
 
-A full website for **MopMasters Cleaning Services** (Nairobi, Kenya), built with Next.js 14 +
+A full website for **Antlar Elite Services** (Nairobi, Kenya), built with Next.js 14 +
 Tailwind CSS, plus a simple password-protected admin dashboard for managing client enquiries.
 
 ## What's included
@@ -57,7 +57,7 @@ Visit `http://localhost:3000` for the site, and `http://localhost:3000/admin` fo
 ```bash
 git init
 git add .
-git commit -m "Initial MopMasters website"
+git commit -m "Initial Antlar website"
 git branch -M main
 git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
 git push -u origin main
@@ -145,4 +145,4 @@ middleware.js         → protects /admin/dashboard from unauthenticated access
 
 ## Support
 
-Built for **MopMasters Cleaning Services** — mopmasterssc@gmail.com — P.O. Box 10, Nairobi.
+Built for **Antlar Elite Services** — antlareliteservices@gmail.com — P.O. Box 10, Nairobi.

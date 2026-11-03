@@ -1,8 +1,8 @@
 import BlogPreview from "@/components/sections/BlogPreview";
 
 export const metadata = {
-  title: "Blog | MopMasters Cleaning Services",
-  description: "Cleaning tips, tricks and professional advice from the MopMasters team in Nairobi, Kenya.",
+  title: "Blog | Antlar Elite Services",
+  description: "Cleaning tips, tricks and professional advice from the Antlar team in Nairobi, Kenya.",
 };
 
 export default function BlogPage() {

@@ -17,7 +17,7 @@ export default function Hero() {
             <span className="text-brand-500">Count On</span>
           </h1>
           <p className="mt-5 max-w-xl text-base text-ink/70 sm:text-lg">
-            MopMasters brings peace of mind to every space we clean. Eco-friendly products,
+            Antlar brings peace of mind to every space we clean. Eco-friendly products,
             vetted cleaners, and genuine attention to every corner.
           </p>
           <p className="mt-3 max-w-xl text-base font-semibold text-brand-700 sm:text-lg">
@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="overflow-hidden rounded-xl2 shadow-soft">
             <Image
               src={images.homeHero}
-              alt="MopMasters professional cleaner at work"
+              alt="Antlar professional cleaner at work"
               width={700}
               height={800}
               priority
