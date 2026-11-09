@@ -7,10 +7,35 @@ function checkAuth(request) {
   return isValidAdminSession(cookie);
 }
 
-function generateInvoiceNumber(existingCount) {
+const PREFIX = "AES";
+
+function formatInvoiceNumber(seq) {
+  return `${PREFIX}-${new Date().getFullYear()}-${String(seq).padStart(4, "0")}`;
+}
+
+// Next sequence = highest existing number for this year + 1. (Counting rows
+// breaks after any invoice is deleted and causes duplicate-number errors.)
+async function nextSequence(supabase) {
   const year = new Date().getFullYear();
-  const seq = String(existingCount + 1).padStart(4, "0");
-  return `MM-${year}-${seq}`;
+  const { data, error } = await supabase
+    .from("invoices")
+    .select("invoice_number")
+    .like("invoice_number", `%-${year}-%`);
+  if (error) throw error;
+  let max = 0;
+  for (const row of data || []) {
+    const n = parseInt(String(row.invoice_number).split("-").pop(), 10);
+    if (Number.isFinite(n) && n > max) max = n;
+  }
+  return max + 1;
+}
+
+function describeError(err) {
+  const msg = err?.message || "Unknown error";
+  if (err?.code === "42P01" || /does not exist|schema cache/i.test(msg)) {
+    return "The invoices table is missing in Supabase. Run supabase/schema.sql in the Supabase SQL Editor.";
+  }
+  return msg;
 }
 
 export async function GET(request) {
@@ -29,7 +54,7 @@ export async function GET(request) {
     return NextResponse.json({ invoices: data });
   } catch (err) {
     console.error(err);
-    return NextResponse.json({ error: "Could not load invoices." }, { status: 500 });
+    return NextResponse.json({ error: `Could not load invoices: ${describeError(err)}` }, { status: 500 });
   }
 }
 
@@ -69,36 +94,37 @@ export async function POST(request) {
   try {
     const supabase = getSupabaseAdmin();
 
-    const { count } = await supabase
-      .from("invoices")
-      .select("id", { count: "exact", head: true });
-
-    const invoiceNumber = generateInvoiceNumber(count || 0);
-
-    const { data, error } = await supabase
-      .from("invoices")
-      .insert({
-        invoice_number: invoiceNumber,
-        client_id: clientId || null,
-        client_name: clientName,
-        client_email: clientEmail || null,
-        client_phone: clientPhone || null,
-        client_address: clientAddress || null,
-        items,
-        subtotal,
-        tax: taxAmount,
-        total,
-        notes: notes || null,
-        status: status || "draft",
-        due_date: dueDate || null,
-      })
-      .select()
-      .single();
+    let seq = await nextSequence(supabase);
+    let data = null;
+    let error = null;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      ({ data, error } = await supabase
+        .from("invoices")
+        .insert({
+          invoice_number: formatInvoiceNumber(seq),
+          client_id: clientId || null,
+          client_name: clientName,
+          client_email: clientEmail || null,
+          client_phone: clientPhone || null,
+          client_address: clientAddress || null,
+          items,
+          subtotal,
+          tax: taxAmount,
+          total,
+          notes: notes || null,
+          status: status || "draft",
+          due_date: dueDate || null,
+        })
+        .select()
+        .single());
+      if (error?.code === "23505") { seq += 1; continue; } // duplicate number, retry
+      break;
+    }
 
     if (error) throw error;
     return NextResponse.json({ invoice: data });
   } catch (err) {
     console.error(err);
-    return NextResponse.json({ error: "Could not create invoice." }, { status: 500 });
+    return NextResponse.json({ error: `Could not create invoice: ${describeError(err)}` }, { status: 500 });
   }
 }
