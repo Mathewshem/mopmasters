@@ -20,6 +20,9 @@ export default function Navbar() {
             <span className="font-display text-xl font-bold tracking-tight text-brand-600 sm:text-2xl">
               Antlar <span className="text-leaf-500">Elite Services</span>
             </span>
+            <span className="mt-0.5 text-[10px] lowercase tracking-wide text-ink/60 sm:text-[11px]">
+              {company.tagline.replace(/\s*\|\s*/g, " ")}
+            </span>
           </span>
         </Link>
 
